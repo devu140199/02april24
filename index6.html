@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide the element by js</title>
+</head>
+<body>
+    <p data-style="ch">This line is hind by click a button</p>
+    <button value="submit" onclick="myActionOnClick('hide')">click</button>
+    <button value="submit" onclick="myActionOnClick('show')">click</button>
+
+    <script>
+        //function defination
+        let myActionOnClick = (state) => {
+            //function let x variable to attribte pick
+            let x = document.querySelector('[data-style]'); 
+            if(state == 'hide'){
+                x.style.display = 'none';
+            }   else {
+                if(state == 'show'){
+                    x.style.display = 'block';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

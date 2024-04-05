@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning logic</title>
+</head>
+<body>
+    <div>
+        <input type="text" name="num1">
+        <button onclick="myFunction()" type="submit">Check value</button>
+    </div>
+    <p id="ptd"></p>
+
+    <script>
+        //function defination
+        function myFunction(){
+            //function body
+            let x = document.querySelector('input[type="text"]').value;
+            console.log(x);
+            // let text='';
+            if (isNaN(x) || x < 1 || x > 10){
+                // console.log(' not ok')
+                document.getElementById('ptd').innerHTML ='Not Ok';
+            }   else {
+                // console.log('ok');
+                document.getElementById('ptd').innerHTML = 'Number Ok';
+            }
+        }
+    </script>
+</body>
+</html>

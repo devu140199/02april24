@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning js</title>
+</head>
+<body>
+    <div>
+        <img src="image/1.jpg" id="img1" width="200px" alt="image" style=" padding-left: 600px;">
+    </div>
+    <div style="padding-left: 650px;">
+        <button onclick="myFunction('back')">Back</button>
+        <button onclick="myFunction('change')">change</button>
+    </div>
+
+    <script>
+        //function defination
+        function myFunction(state){
+            if(state == 'back'){
+                document.getElementById('img1').setAttribute('src','image/1.jpg');
+            }   else {
+                if(state == 'change'){
+                    document.getElementById('img1').setAttribute('src','image/2.jpg');
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

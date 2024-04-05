@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change css by js</title>
+</head>
+<body>
+    <p data-style="design">this is the best learning methods & click to change style.</p>
+    <button value="submit" onclick="myFunctionChangeStyle('big')">click to big</button>
+    <button value="submit" onclick="myFunctionChangeStyle('small')">click to small</button>
+
+    <script>
+        //function defination
+        let myFunctionChangeStyle = (state) => {
+            let x = document.querySelector('[data-style]');
+            if(state == 'big'){
+                x.style.fontSize = '4rem';
+            }   else {
+                if(state == 'small'){
+                    x.style.fontSize = '2rem';
+                }
+            }
+
+            // let x = document.querySelector('p[data-style]');
+            // console.log(x);
+            // x.style.fontSize = '4rem';
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning logic...</title>
+</head>
+<body>
+    <p data-val="num1" id = 'hh'>change your number</p>
+    <input type="text" >
+    <button onclick="myDigit()">click</button>
+
+    <script>
+        //function defination
+        function myDigit(){
+            //function body
+            let x = document.querySelector('input[type="text"]').value;
+            document.getElementById('hh').innerHTML = x;
+        }
+    </script>
+</body>
+</html>
