@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pure javascript...</title>
+</head>
+<body>
+    
+
+    <script>
+        //create an element by javascript use
+        let h = document.createElement('header');
+        //content inside header tag
+        h.innerHTML = 'HEADER';
+        //create an section element in script tag
+        let n = document.createElement('nav');
+        n.innerHTML = 'MENU BAR';
+        let a1 = document.createElement('aside');
+        a1.innerHTML = 'aside';
+        let a2 = document.createElement('section');
+        a2.innerHTML = 'section';
+        let a3 = document.createElement('aside');
+        a3.innerHTML = 'aside';
+        //create  an footer element inside script tag
+        let f = document.createElement('footer');
+        //content inside div
+        f.innerHTML = 'FOOTER';
+        
+
+        //appendChild use for header tag goes to inside body Element
+        document.body.appendChild(h);
+        document.body.appendChild(n);
+        document.body.appendChild(a1);
+        document.body.appendChild(a2);
+        document.body.appendChild(a3);
+        document.body.appendChild(f);
+
+
+        //body get margin 0px fix to margin
+        document.body.style.margin = '0px';
+        //header tag inside class attribute
+        document.querySelector('header').setAttribute('class','d_header');
+        //inside header class attribute get style   
+        let x = document.getElementsByClassName('d_header');
+        x[0].style.fontFamily = 'arial';
+        x[0].style.fontSize = '2rem';
+        x[0].style.height = '150px';
+        x[0].style.width = "100%";
+        x[0].style.backgroundColor = 'red';
+        x[0].style.textAlign = 'center';
+        x[0].style.lineHeight = '150px';
+        x[0].style.border = '3px solid #333';
+        
+        //inside section element create an class attribute
+        document.querySelector('nav').setAttribute('class','d_menu'); 
+        //gives style class d_menu
+        let xMenu = document.getElementsByClassName('d_menu');
+        xMenu[0].style.fontFamily = 'arial';
+        xMenu[0].style.fontSize = '2rem';
+        xMenu[0].style.width = '100%';
+        xMenu[0].style.height = '150px';
+        xMenu[0].style.lineHeight = '150px';
+        xMenu[0].style.backgroundColor = 'brown';
+        xMenu[0].style.border = '3px solid #333';
+        xMenu[0].style.textAlign = 'center';
+        
+
+        //aside, section, aside all in inline block set
+        let arr = document.querySelectorAll('aside');
+        console.log(arr);
+        arr.forEach(function(currentValue, index, arr){
+            arr[index].style.display = 'inline-block';
+        })
+        document.querySelector('section').style.display = 'inline-block';
+
+    </script>
+</body>
+</html>
