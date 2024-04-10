@@ -26,6 +26,10 @@
         let f = document.createElement('footer');
         //content inside div
         f.innerHTML = 'FOOTER';
+        //create an button tag
+        let bt = document.createElement('button');
+        //button value
+        bt.innerHTML = 'click';
         
 
         //appendChild use for header tag goes to inside body Element
@@ -35,6 +39,7 @@
         document.body.appendChild(a2);
         document.body.appendChild(a3);
         document.body.appendChild(f);
+        document.querySelector('footer').appendChild(bt);
 
 
         //body get margin 0px fix to margin
@@ -68,11 +73,55 @@
 
         //aside, section, aside all in inline block set
         let arr = document.querySelectorAll('aside');
-        console.log(arr);
         arr.forEach(function(currentValue, index, arr){
             arr[index].style.display = 'inline-block';
         })
         document.querySelector('section').style.display = 'inline-block';
+
+        //aside and section gives style
+        let aside1 = document.querySelector('.d_menu ~ aside');
+        aside1.style.width = "25%";
+        aside1.style.border = '3px solid #333';
+        aside1.style.height = '150px';
+        aside1.style.fontSize = '2rem';
+        aside1.style.fontFamily = 'arial';
+        aside1.style.textAlign = 'center';
+        aside1.style.lineHeight = '150px';
+        aside1.style.backgroundColor = 'yellow';
+
+        let sec = document.getElementsByTagName('section');
+        sec[0].style.width = '48%';
+        sec[0].style.border = '3px solid #333';
+        sec[0].style.height = '150px';
+        sec[0].style.fontSize = '2rem';
+        sec[0].style.fontFamily = 'arial';
+        sec[0].style.textAlign = 'center';
+        sec[0].style.lineHeight = '150px';
+        sec[0].style.backgroundColor = 'pink';
+
+        let aside2 = document.querySelector('section ~ aside');
+        // console.log(aside2);
+        aside2.style.width = '25%';
+        aside2.style.border = '3px solid #333';
+        aside2.style.height = '150px';
+        aside2.style.fontSize = '2rem';
+        aside2.style.fontFamily = 'arial';
+        aside2.style.textAlign = 'center';
+        aside2.style.lineHeight = '150px';
+        aside2.style.backgroundColor = 'orange';
+
+        //get pick footer tag and gives style
+
+        let fe = document.getElementsByTagName('footer');
+        fe[0].style.fontFamily = 'arial';
+        fe[0].style.border = '3px solid #333';
+        fe[0].style.width ='100%';
+        fe[0].style.height = '150px';
+        fe[0].style.fontSize = '2rem';
+        fe[0].style.textAlign = 'center';
+        fe[0].style.lineHeight = '150px';
+        fe[0].style.backgroundColor = 'green';
+
 
     </script>
 </body>
