@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tag create by js and add font icons...</title>
+</head>
+<body>
+    
+
+    <script>
+        //create font awsome link by js
+        /* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />*/
+        let l = document.createElement('link');
+        // console.log(l);
+        l.setAttribute('rel','stylesheet');
+        l.setAttribute('href','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+        //link append by head tag
+        document.head.appendChild(l);
+
+        //create i tag for font icons add
+        let i = document.createElement('i');
+        i.setAttribute('class','fa-solid');
+        //add another class value by classList.add() method
+        i.classList.add('fa-star');
+        // console.log(i);
+        document.body.appendChild(i);
+
+
+        //create unorder list by pure js
+        let u = document.createElement('ul');
+        console.log(u);
+        //create li list 10 items
+        var li = document.createElement('li');
+        console.log(li);
+        for(i=0; i<4; i++){
+            // console.log(i);
+            let list =  li[i];
+            console.log(list);
+            document.querySelector('list').innerHTML = 'hello';
+        }
+
+    </script>
+</body>
+</html>

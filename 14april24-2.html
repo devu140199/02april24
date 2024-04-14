@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning js unorder list create by Pure JS...</title>
+</head>
+<body>
+    
+
+    <script>
+        //create ul tag for unorder list
+        let ul = document.createElement('ul');
+        // console.log(ul);
+        //create 10 li list 
+        for(let i=0; i<10; i++){
+            let li = document.createElement('li');
+            //add class attribute in li
+            li.setAttribute('class','d_li');
+            //add more class attribute in li
+            li.classList.add('common');
+            //text add in li
+            let tn = document.createTextNode('hello ' + (i+1));
+            // console.log(tn);
+            li.appendChild(tn);
+            // console.log(li);
+            ul.appendChild(li);
+        }
+        document.body.appendChild(ul);
+
+        //to access common class
+        var com = document.getElementsByClassName('common');
+        // console.log(typeof com);
+        for(let x in com){
+            if(!isNaN(x) && ((x <= 2) || (x >= 6)) ){
+                com[x].style.color = 'red';
+            }
+        }
+
+        var o1 = {
+            "name" : "devender",
+            'surname' : "sharma",
+            mission : 'comfidence build in javascript',
+            myFunction : function(){
+                //function return somethings
+                return this.name +" "+ this.surname;
+            } ,
+            myFun : function(){
+                //function return somethings
+                return this.mission;
+            } 
+        }
+        // let value = o1.name;
+        let value = o1.myFunction();
+        console.log(o1.myFun());
+        console.log(value);
+
+    </script>
+</body>
+</html>

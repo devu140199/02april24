@@ -30,7 +30,15 @@
         let bt = document.createElement('button');
         //button value
         bt.innerHTML = 'click';
+        //create an block to place give value by alert msg
+        let give = document.createElement('input');
+        give.setAttribute('id','valueRes');
         
+
+        bt.addEventListener('click',function(){
+            var value = prompt('enter your value');
+            document.querySelector('#valueRes').value = value;
+        });
 
         //appendChild use for header tag goes to inside body Element
         document.body.appendChild(h);
@@ -40,6 +48,7 @@
         document.body.appendChild(a3);
         document.body.appendChild(f);
         document.querySelector('footer').appendChild(bt);
+        document.body.appendChild(give);
 
 
         //body get margin 0px fix to margin

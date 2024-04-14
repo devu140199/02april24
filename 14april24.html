@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript closest method use...</title>
+</head>
+<body>
+    <div class="gp">Grand Parent
+        <div class="p">Parent
+            <div class="c">Child
+                <div class="gc gc1">Grand Child
+                </div>
+                <div class="gc gc2">Grand Child2
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        //pick gc tag for travesing up
+        gc = document.querySelector('.gc');
+        // console.log(gc);
+        //use cloeset methode for access all parent node 
+        gc.closest('div.gp').style.border = "1px solid red";
+        gc.closest('.p').style.border = '1px solid black';
+        gc.closest('.c').style.border = '1px dashed green';
+        gc.closest('div.gc1').style.border = '3px dashed grey';
+        let gcf = document.querySelectorAll('.gc');
+        // console.log(gcf);
+        gcf.forEach(function(current,index,array){
+            // console.log(current);
+            // console.log(gcf[index]);
+            gcf[0].style.border = '2px dashed grey';
+            gcf[1].style.border = '3px dashed pink';
+        })
+
+        //pick parent node for travesing down
+        gp = document.querySelector('.gp');
+        // console.log(gp);
+        //element.querySelector();
+        gp.style.backgroundColor = 'green';
+        gp.querySelector('div.p').style.backgroundColor = "orange";
+        gp.querySelector('div.c').style.backgroundColor = "red";
+        let gpf = gp.querySelectorAll('div.gc');
+        // console.log(gpf);
+        gpf.forEach(function(currentValue,index,arr){
+            // console.log(currentValue);
+            gpf[0].style.backgroundColor = 'pink';
+            gpf[1].style.backgroundColor = "silver";
+        });
+
+        //variable declartion
+         var gc;
+         var gp;
+    </script>
+</body>
+</html>

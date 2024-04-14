@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+
+
+    <script>
+        //variable initialization
+        t = document.querySelector('title');
+        t.innerHTML = 'Js Learning is Continue...';
+
+        /* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />*/
+        s = document.createElement('link');
+        // console.log(s);
+        s.setAttribute('rel','stylesheet');
+        s.setAttribute('href','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+        //tag append inside head tag
+        document.head.appendChild(s);
+
+        //create tag i for fa icon add in page
+        f = document.createElement('i');
+        f.setAttribute('class','fa-solid');
+        f.classList.add('fa-gamepad');
+
+        //tag f append inside body tag
+        document.body.appendChild(f);
+        
+        //variable declartion
+        var f;
+        var s;
+        var t;
+    </script>
+</body>
+</html>
